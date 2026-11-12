@@ -1,0 +1,13 @@
+user_id,product_id,category,product_type,price,action
+1,101,Electronics,Laptop,25000,click
+1,102,Electronics,Laptop,30000,view
+1,103,Electronics,Mobile,15000,click
+1,104,Furniture,Chair,2000,view
+2,105,Electronics,Laptop,28000,click
+2,106,Electronics,Mobile,12000,view
+2,107,Furniture,Table,5000,click
+3,108,Electronics,Laptop,22000,view
+3,109,Books,Education,500,click
+3,110,Furniture,Chair,2500,view
+4,111,Electronics,Mobile,18000,click
+4,112,Books,Education,700,view

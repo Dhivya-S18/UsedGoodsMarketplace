@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse Products – ReUse</title>
+  <meta name="description" content="Explore quality pre-owned products on ReUse. Search and filter by category, price and condition.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261112-recommendations">
+</head>
+<body class="products-page">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ===== Navigation ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="ReUse home">
+        <svg class="logo-icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="currentColor"/>
+          <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 13.5 14.2 8h3.6l1.6 2.8"/>
+            <path d="m17.2 9.2 2.2 1.6-1.6 2.6"/>
+            <path d="M23 15.5 21.4 21H15"/>
+            <path d="m16.4 22.9-1.9-2 2-2.1"/>
+            <path d="M9.8 18.4 8.6 14.5 12 14"/>
+          </g>
+        </svg>
+        <span class="logo-text">ReUse</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link is-active" href="products.html" aria-current="page">Browse Products</a></li>
+          <li><a class="nav-link" href="sell.html">Sell an Item</a></li>
+        </ul>
+        <div class="nav-actions" data-auth-nav></div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== Page heading and search ===== -->
+    <section class="page-section products-hero" id="products-hero" aria-labelledby="products-title">
+      <div class="container">
+        <header class="page-head">
+          <h1 class="page-title" id="products-title">Discover Pre-Loved Products</h1>
+          <p class="page-subtitle">Explore quality pre-owned products, find great deals, and give useful items a second life.</p>
+        </header>
+
+        <form class="search-bar" id="search-form" role="search" action="#" novalidate>
+          <label class="visually-hidden" for="product-search">Search products by title, category or type</label>
+          <svg class="search-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="m20 20-3.8-3.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input class="search-input" id="product-search" name="q" type="search" placeholder="Search laptops, furniture, books..." autocomplete="off">
+          <button class="btn btn-primary search-submit" id="search-btn" type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Filters ===== -->
+    <section class="filters" id="filters" aria-label="Product filters">
+      <div class="container">
+
+        <div class="category-filters" id="category-filters" role="group" aria-label="Filter by category">
+          <button class="chip is-active" type="button" data-category="All" aria-pressed="true">All Products</button>
+          <button class="chip" type="button" data-category="Electronics" aria-pressed="false">Electronics</button>
+          <button class="chip" type="button" data-category="Furniture" aria-pressed="false">Furniture</button>
+          <button class="chip" type="button" data-category="Books" aria-pressed="false">Books</button>
+          <button class="chip" type="button" data-category="Other" aria-pressed="false">Other</button>
+        </div>
+
+        <form class="filter-panel" id="filter-form" action="#" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="min-price">Minimum Price (₹)</label>
+            <input class="form-input" id="min-price" name="min_price" type="number" inputmode="decimal" min="0" step="any" placeholder="0">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="max-price">Maximum Price (₹)</label>
+            <input class="form-input" id="max-price" name="max_price" type="number" inputmode="decimal" min="0" step="any" placeholder="Any">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="condition-filter">Product Condition</label>
+            <select class="form-input form-select" id="condition-filter" name="condition">
+              <option value="All" selected>All</option>
+              <option value="Like New">Like New</option>
+              <option value="Good">Good</option>
+              <option value="Fair">Fair</option>
+            </select>
+          </div>
+          <div class="filter-actions">
+            <button class="btn btn-primary" id="apply-filters" type="submit">Apply Filters</button>
+            <button class="btn btn-ghost" id="clear-filters" type="button">Clear Filters</button>
+          </div>
+        </form>
+
+        <p class="form-message is-error" id="filter-message" role="alert" hidden></p>
+      </div>
+    </section>
+
+    <!-- ===== Product listing ===== -->
+    <section class="section product-listing" id="product-listing" aria-labelledby="listing-title">
+      <div class="container">
+        <header class="section-head section-head-row">
+          <div>
+            <h2 class="section-title" id="listing-title">Available Products</h2>
+            <p class="result-count" id="product-count" role="status" aria-live="polite"></p>
+          </div>
+        </header>
+
+        <p class="sample-notice" id="sample-notice" role="note">
+          Design preview: these are sample products used for demonstration, not real listings. They will be replaced with products from the ReUse API.
+        </p>
+
+        <div class="product-grid" id="products-grid"></div>
+
+        <div class="empty-state" id="no-products" hidden>
+          <svg class="empty-state-icon" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8M8.5 11h5"/></svg>
+          <h3 class="empty-state-title">No products match your search</h3>
+          <p class="empty-state-text">Try a different keyword, widen the price range, or clear the filters to see everything.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Recommendations ===== -->
+    <section class="section recommendations-strip" id="recommendations" aria-labelledby="recommended-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title" id="recommended-title">Recommended for You</h2>
+          <p class="section-subtitle">Discover products based on your browsing activity and interests.</p>
+        </header>
+
+        <!-- Reserved for KNN recommendation results from the FastAPI backend -->
+        <div class="recommendations-container" id="recommendations-container" aria-live="polite">
+          <svg class="empty-state-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3Z"/><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></svg>
+          <p class="recommendations-placeholder">Personalized recommendations will appear after browsing activity is available. Open a few products and check back.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/config.js?v=20261112-tab-session"></script>
+  <script src="js/auth.js?v=20261112-access"></script>
+  <script src="js/products.js?v=20261112-access"></script>
+  <script src="js/recommendations.js?v=20261112-horizontal"></script>
+
+</body>
+</html>

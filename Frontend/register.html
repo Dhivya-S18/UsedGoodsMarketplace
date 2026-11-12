@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Account – ReUse</title>
+  <meta name="description" content="Create your ReUse account to buy and sell pre-loved products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="auth-layout">
+
+    <!-- ===== Left: branding and visual ===== -->
+    <aside class="auth-brand" aria-label="About ReUse">
+      <div class="auth-brand-inner">
+        <a class="logo" href="index.html" aria-label="ReUse home">
+          <svg class="logo-icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+            <rect width="32" height="32" rx="9" fill="currentColor"/>
+            <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 13.5 14.2 8h3.6l1.6 2.8"/>
+              <path d="m17.2 9.2 2.2 1.6-1.6 2.6"/>
+              <path d="M23 15.5 21.4 21H15"/>
+              <path d="m16.4 22.9-1.9-2 2-2.1"/>
+              <path d="M9.8 18.4 8.6 14.5 12 14"/>
+            </g>
+          </svg>
+          <span class="logo-text">ReUse</span>
+        </a>
+
+        <div class="auth-brand-copy">
+          <h2 class="auth-brand-title">Join a Community That Reuses.</h2>
+          <p class="auth-brand-text">Create an account to browse pre-owned products, list items you no longer need, and contact sellers directly.</p>
+        </div>
+
+        <div class="auth-visual" role="presentation">
+          <span class="auth-ring auth-ring-lg" aria-hidden="true"></span>
+          <span class="auth-ring auth-ring-sm" aria-hidden="true"></span>
+
+          <figure class="auth-tile auth-tile-main">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80" alt="Minimal wooden chair, a pre-owned furniture example" width="900" height="675" loading="eager">
+            <figcaption>Furniture</figcaption>
+          </figure>
+          <figure class="auth-tile auth-tile-laptop">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Smartphone resting on a table" width="600" height="450" loading="eager">
+            <figcaption>Electronics</figcaption>
+          </figure>
+          <figure class="auth-tile auth-tile-books">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=500&q=80" alt="Stack of used books" width="500" height="500" loading="eager">
+            <figcaption>Books</figcaption>
+          </figure>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== Right: registration form ===== -->
+    <main class="auth-panel" id="main-content">
+      <div class="auth-panel-inner">
+
+        <a class="back-link" href="index.html" id="back-home">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Home
+        </a>
+
+        <section class="auth-card" aria-labelledby="register-title">
+          <header class="auth-card-head">
+            <h1 class="auth-title" id="register-title">Create Your Account</h1>
+            <p class="auth-subtitle">Join ReUse and give pre-loved products a new life.</p>
+          </header>
+
+          <form class="auth-form" id="register-form" method="post" action="#" novalidate>
+
+            <div class="form-group" id="full-name-group">
+              <label class="form-label" for="full-name">Full Name</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <input class="form-input" id="full-name" name="full_name" type="text" placeholder="Enter your full name" autocomplete="name" required aria-describedby="full-name-error">
+              </div>
+              <p class="field-error" id="full-name-error" hidden></p>
+            </div>
+
+            <div class="form-group" id="email-group">
+              <label class="form-label" for="email">Email Address</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 8 8 5.5L20 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <input class="form-input" id="email" name="email" type="email" inputmode="email" placeholder="Enter your email address" autocomplete="email" autocapitalize="none" spellcheck="false" required aria-describedby="email-error">
+              </div>
+              <p class="field-error" id="email-error" hidden></p>
+            </div>
+
+            <div class="form-group" id="password-group">
+              <label class="form-label" for="password">Password</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect x="4.5" y="10.5" width="15" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <input class="form-input has-toggle" id="password" name="password" type="password" placeholder="Create a password" autocomplete="new-password" minlength="8" required aria-describedby="password-hint password-error">
+                <button class="toggle-password" id="toggle-password" type="button" aria-label="Show password" aria-pressed="false" aria-controls="password">
+                  <svg class="icon-eye" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+                  <svg class="icon-eye-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" hidden><path d="M3 3l18 18M10.6 5.7A10 10 0 0 1 12 5.5c6.4 0 10 6.5 10 6.5a17 17 0 0 1-3.2 4M6.5 7.6A16.6 16.6 0 0 0 2 12s3.6 6.5 10 6.5c1.5 0 2.8-.3 4-.8M9.9 9.9a3 3 0 0 0 4.2 4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+              <p class="field-hint" id="password-hint">Use at least 8 characters.</p>
+              <p class="field-error" id="password-error" hidden></p>
+            </div>
+
+            <div class="form-group" id="confirm-password-group">
+              <label class="form-label" for="confirm-password">Confirm Password</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect x="4.5" y="10.5" width="15" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <input class="form-input has-toggle" id="confirm-password" name="confirm_password" type="password" placeholder="Re-enter your password" autocomplete="new-password" required aria-describedby="confirm-password-error">
+                <button class="toggle-password" id="toggle-confirm-password" type="button" aria-label="Show confirm password" aria-pressed="false" aria-controls="confirm-password">
+                  <svg class="icon-eye" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+                  <svg class="icon-eye-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" hidden><path d="M3 3l18 18M10.6 5.7A10 10 0 0 1 12 5.5c6.4 0 10 6.5 10 6.5a17 17 0 0 1-3.2 4M6.5 7.6A16.6 16.6 0 0 0 2 12s3.6 6.5 10 6.5c1.5 0 2.8-.3 4-.8M9.9 9.9a3 3 0 0 0 4.2 4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+              <p class="field-error" id="confirm-password-error" hidden></p>
+            </div>
+
+            <!-- Form-level message: errors and the frontend-only success notice -->
+            <p class="form-message" id="register-message" role="status" aria-live="polite" hidden></p>
+
+            <button class="btn btn-primary btn-block" id="register-submit" type="submit">Create Account</button>
+          </form>
+
+          <p class="auth-switch">
+            Already have an account? <a class="text-link" href="login.html" id="login-link">Sign in</a>
+          </p>
+        </section>
+
+        <nav class="auth-footer-nav" aria-label="Quick links">
+          <a href="products.html">Browse Products</a>
+          <a href="sell.html">Sell an Item</a>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var form = document.getElementById('register-form');
+      var message = document.getElementById('register-message');
+
+      var fields = {
+        name: {
+          input: document.getElementById('full-name'),
+          error: document.getElementById('full-name-error')
+        },
+        email: {
+          input: document.getElementById('email'),
+          error: document.getElementById('email-error')
+        },
+        password: {
+          input: document.getElementById('password'),
+          error: document.getElementById('password-error')
+        },
+        confirm: {
+          input: document.getElementById('confirm-password'),
+          error: document.getElementById('confirm-password-error')
+        }
+      };
+
+      var EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      var MIN_PASSWORD_LENGTH = 8;
+
+      /* ---------- Show / hide password ---------- */
+      function setupToggle(buttonId, input, showLabel, hideLabel) {
+        var btn = document.getElementById(buttonId);
+        var eyeOn = btn.querySelector('.icon-eye');
+        var eyeOff = btn.querySelector('.icon-eye-off');
+
+        btn.addEventListener('click', function () {
+          var show = input.type === 'password';
+          input.type = show ? 'text' : 'password';
+          btn.setAttribute('aria-pressed', String(show));
+          btn.setAttribute('aria-label', show ? hideLabel : showLabel);
+          eyeOn.hidden = show;
+          eyeOff.hidden = !show;
+          input.focus();
+        });
+      }
+
+      setupToggle('toggle-password', fields.password.input, 'Show password', 'Hide password');
+      setupToggle('toggle-confirm-password', fields.confirm.input, 'Show confirm password', 'Hide confirm password');
+
+      /* ---------- Helpers ---------- */
+      function setFieldError(field, text) {
+        var group = field.input.closest('.form-group');
+        if (text) {
+          field.error.textContent = text;
+          field.error.hidden = false;
+          field.input.setAttribute('aria-invalid', 'true');
+          group.classList.add('has-error');
+        } else {
+          field.error.textContent = '';
+          field.error.hidden = true;
+          field.input.removeAttribute('aria-invalid');
+          group.classList.remove('has-error');
+        }
+      }
+
+      function showMessage(text, type) {
+        message.classList.remove('is-error', 'is-success');
+        if (text) {
+          message.textContent = text;
+          message.classList.add(type === 'success' ? 'is-success' : 'is-error');
+          message.hidden = false;
+        } else {
+          message.textContent = '';
+          message.hidden = true;
+        }
+      }
+
+      /* ---------- Validators (each returns true when valid) ---------- */
+      function validateName() {
+        if (!fields.name.input.value.trim()) {
+          setFieldError(fields.name, 'Enter your full name.');
+          return false;
+        }
+        setFieldError(fields.name, '');
+        return true;
+      }
+
+      function validateEmail() {
+        var value = fields.email.input.value.trim();
+        if (!value) {
+          setFieldError(fields.email, 'Enter your email address.');
+          return false;
+        }
+        if (!EMAIL_PATTERN.test(value)) {
+          setFieldError(fields.email, 'Enter a valid email address, like name@example.com.');
+          return false;
+        }
+        setFieldError(fields.email, '');
+        return true;
+      }
+
+      function validatePassword() {
+        var value = fields.password.input.value;
+        if (!value) {
+          setFieldError(fields.password, 'Create a password.');
+          return false;
+        }
+        if (value.length < MIN_PASSWORD_LENGTH) {
+          setFieldError(fields.password, 'Password must be at least ' + MIN_PASSWORD_LENGTH + ' characters.');
+          return false;
+        }
+        setFieldError(fields.password, '');
+        return true;
+      }
+
+      function validateConfirm() {
+        var value = fields.confirm.input.value;
+        if (!value) {
+          setFieldError(fields.confirm, 'Confirm your password.');
+          return false;
+        }
+        if (value !== fields.password.input.value) {
+          setFieldError(fields.confirm, 'Passwords do not match.');
+          return false;
+        }
+        setFieldError(fields.confirm, '');
+        return true;
+      }
+
+      /* ---------- Live feedback: clear or update errors as the user corrects them ---------- */
+      function onEdit() {
+        // Any edit invalidates a previous success or error notice
+        if (!message.hidden) showMessage('');
+      }
+
+      fields.name.input.addEventListener('input', function () {
+        onEdit();
+        if (!fields.name.error.hidden) validateName();
+      });
+
+      fields.email.input.addEventListener('input', function () {
+        onEdit();
+        if (!fields.email.error.hidden) validateEmail();
+      });
+      fields.email.input.addEventListener('blur', function () {
+        if (fields.email.input.value) validateEmail();
+      });
+
+      fields.password.input.addEventListener('input', function () {
+        onEdit();
+        if (!fields.password.error.hidden) validatePassword();
+        // Keep the confirm field in sync once it has been checked
+        if (fields.confirm.input.value && !fields.confirm.error.hidden) validateConfirm();
+      });
+
+      fields.confirm.input.addEventListener('input', function () {
+        onEdit();
+        if (!fields.confirm.error.hidden) validateConfirm();
+      });
+      fields.confirm.input.addEventListener('blur', function () {
+        if (fields.confirm.input.value) validateConfirm();
+      });
+
+      /* ---------- Submit ---------- */
+      form.addEventListener('submit', function (event) {
+        // Always stop the default submit; no account is created from this page yet.
+        event.preventDefault();
+        showMessage('');
+
+        var results = [
+          validateName(),
+          validateEmail(),
+          validatePassword(),
+          validateConfirm()
+        ];
+
+        if (results.indexOf(false) !== -1) {
+          showMessage('Please fix the highlighted fields and try again.', 'error');
+          var order = [fields.name, fields.email, fields.password, fields.confirm];
+          order[results.indexOf(false)].input.focus();
+          return;
+        }
+
+        showMessage('Your details look good. Account creation is not connected yet; backend registration will be added in a later step.', 'success');
+
+        /*
+          Backend integration (FastAPI registration endpoint) goes here.
+          Read values with:
+            fields.name.input.value.trim(),
+            fields.email.input.value.trim(),
+            fields.password.input.value
+          Do not send the confirm-password value.
+          Use showMessage('...', 'error') for server errors and
+          showMessage('...', 'success') once registration actually succeeds.
+        */
+      });
+    })();
+  </script>
+  <script src="js/config.js?v=20261112-tab-session"></script>
+  <script src="js/auth.js?v=20261112-access"></script>
+</body>
+</html>

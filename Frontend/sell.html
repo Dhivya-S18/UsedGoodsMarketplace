@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sell an Item – ReUse</title>
+  <meta name="description" content="List your pre-loved product on ReUse and connect with interested buyers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sell-page">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ===== Navigation ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="ReUse home">
+        <svg class="logo-icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="currentColor"/>
+          <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 13.5 14.2 8h3.6l1.6 2.8"/>
+            <path d="m17.2 9.2 2.2 1.6-1.6 2.6"/>
+            <path d="M23 15.5 21.4 21H15"/>
+            <path d="m16.4 22.9-1.9-2 2-2.1"/>
+            <path d="M9.8 18.4 8.6 14.5 12 14"/>
+          </g>
+        </svg>
+        <span class="logo-text">ReUse</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="products.html">Browse Products</a></li>
+          <li><a class="nav-link is-active" href="sell.html" aria-current="page">Sell an Item</a></li>
+        </ul>
+        <div class="nav-actions" data-auth-nav></div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-section sell-section" aria-labelledby="sell-title">
+      <div class="container sell-container">
+
+        <header class="page-head">
+          <h1 class="page-title" id="sell-title">Sell Your Pre-Loved Product</h1>
+          <p class="page-subtitle">Give your unused items a new home. Add product details and connect with interested buyers.</p>
+        </header>
+
+        <form class="sell-form form-card" id="sell-form" method="post" action="#" novalidate>
+
+          <!-- Product details -->
+          <fieldset class="form-section">
+            <legend class="form-section-title">Product details</legend>
+
+            <div class="form-group" id="product-title-group">
+              <label class="form-label" for="product-title">Product Title</label>
+              <input class="form-input" id="product-title" name="title" type="text" placeholder="e.g. Dell Inspiron 15 Laptop" maxlength="120" autocomplete="off" required aria-describedby="product-title-error">
+              <p class="field-error" id="product-title-error" hidden></p>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group" id="category-group">
+                <label class="form-label" for="category">Category</label>
+                <select class="form-input form-select" id="category" name="category" required aria-describedby="category-error">
+                  <option value="" selected disabled>Select a category</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="Furniture">Furniture</option>
+                  <option value="Books">Books</option>
+                  <option value="Other">Other</option>
+                </select>
+                <p class="field-error" id="category-error" hidden></p>
+              </div>
+
+              <div class="form-group" id="product-type-group">
+                <label class="form-label" for="product-type">Product Type</label>
+                <input class="form-input" id="product-type" name="product_type" type="text" placeholder="e.g. Laptop, Office chair, Textbook" maxlength="80" autocomplete="off" required aria-describedby="product-type-error">
+                <p class="field-error" id="product-type-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group" id="price-group">
+                <label class="form-label" for="price">Price (₹)</label>
+                <div class="input-wrap input-prefix-wrap">
+                  <span class="input-prefix" aria-hidden="true">₹</span>
+                  <input class="form-input has-prefix" id="price" name="price" type="number" inputmode="decimal" min="0.01" step="any" placeholder="Enter price in rupees" required aria-describedby="price-error">
+                </div>
+                <p class="field-error" id="price-error" hidden></p>
+              </div>
+
+              <div class="form-group" id="condition-group">
+                <label class="form-label" for="condition">Condition</label>
+                <select class="form-input form-select" id="condition" name="condition" required aria-describedby="condition-error">
+                  <option value="" selected disabled>Select condition</option>
+                  <option value="Like New">Like New</option>
+                  <option value="Good">Good</option>
+                  <option value="Fair">Fair</option>
+                </select>
+                <p class="field-error" id="condition-error" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- AI description helper -->
+          <section class="ai-panel" id="ai-panel" aria-labelledby="ai-panel-title">
+            <span class="ai-panel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3Z"/><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></svg>
+            </span>
+            <div class="ai-panel-body">
+              <h2 class="ai-panel-title" id="ai-panel-title">Generate Description with AI</h2>
+              <p class="ai-panel-text">Let AI create a professional product description using your product details.</p>
+              <button class="btn btn-secondary ai-btn" id="generate-description-btn" type="button" aria-describedby="ai-message">Generate with AI</button>
+              <p class="ai-message" id="ai-message" role="status" aria-live="polite" hidden></p>
+            </div>
+          </section>
+
+          <!-- Description -->
+          <fieldset class="form-section">
+            <legend class="form-section-title">Description</legend>
+            <div class="form-group" id="description-group">
+              <label class="form-label" for="description">Product Description</label>
+              <textarea class="form-input form-textarea" id="description" name="description" rows="6" placeholder="Describe the item: its age, how it has been used, any marks or missing parts, and what is included." maxlength="2000" required aria-describedby="description-error"></textarea>
+              <p class="field-error" id="description-error" hidden></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend class="form-section-title">Photo</legend>
+            <div class="form-group">
+              <label class="form-label" for="product-image">Product Image <span class="label-optional">(optional)</span></label>
+              <div class="upload-field" id="upload-field">
+                <input class="upload-input" id="product-image" name="image" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="product-image-hint">
+                <label class="upload-drop" for="product-image">
+                  <span class="upload-title">Choose an image</span>
+                  <span class="upload-hint" id="product-image-hint">JPG, PNG, or WebP; up to 5 MB.</span>
+                </label>
+              </div>
+              <div class="image-preview-box" id="image-preview-box" hidden>
+                <img class="image-preview" id="image-preview" alt="Preview of the selected product image">
+                <div class="image-preview-meta">
+                  <p class="image-filename" id="image-filename"></p>
+                  <div class="image-preview-actions">
+                    <button class="btn btn-ghost btn-sm" id="remove-image-btn" type="button">Remove image</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <p class="form-message" id="sell-message" role="status" aria-live="polite" hidden></p>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" id="sell-submit" type="submit">List Product</button>
+            <a class="btn btn-ghost" href="index.html">Cancel</a>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      /* ---------- Mobile navigation ---------- */
+      var navToggle = document.getElementById('nav-toggle');
+      var navMenu = document.getElementById('nav-menu');
+
+      function setNavOpen(open) {
+        navToggle.setAttribute('aria-expanded', String(open));
+        navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        navMenu.classList.toggle('is-open', open);
+        document.body.classList.toggle('nav-open', open);
+      }
+      navToggle.addEventListener('click', function () {
+        setNavOpen(navToggle.getAttribute('aria-expanded') !== 'true');
+      });
+      navMenu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setNavOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setNavOpen(false);
+      });
+
+    })();
+  </script>
+  <script src="js/config.js?v=20261112-tab-session"></script>
+  <script src="js/auth.js?v=20261112-access"></script>
+  <script src="js/sell.js?v=20261112-images"></script>
+</body>
+</html>

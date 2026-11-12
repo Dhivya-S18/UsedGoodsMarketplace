@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReUse – Buy and Sell Pre-Loved Products</title>
+  <meta name="description" content="ReUse is an AI-powered marketplace for buying and selling used goods. Discover quality pre-owned products and give everyday items a second chance.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+
+      <a class="logo" href="index.html" aria-label="ReUse home">
+        <svg class="logo-icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="currentColor"/>
+          <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 13.5 14.2 8h3.6l1.6 2.8"/>
+            <path d="m17.2 9.2 2.2 1.6-1.6 2.6"/>
+            <path d="M23 15.5 21.4 21H15"/>
+            <path d="m16.4 22.9-1.9-2 2-2.1"/>
+            <path d="M9.8 18.4 8.6 14.5 12 14"/>
+          </g>
+        </svg>
+        <span class="logo-text">ReUse</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-expanded="false" aria-controls="nav-menu"
+              aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a class="nav-link is-active" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="products.html">Browse Products</a></li>
+          <li><a class="nav-link" href="sell.html">Sell an Item</a></li>
+        </ul>
+
+        <div class="nav-actions" data-auth-nav></div>
+      </div>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <h1 class="hero-title" id="hero-title">
+            Give Pre-Loved Things a New Life.
+          </h1>
+
+          <p class="hero-text">
+            Discover quality pre-owned products, find great deals,
+            and give everyday items a second chance.
+          </p>
+
+          <form class="search-bar" id="search-form"
+                role="search" action="products.html" method="get">
+
+            <label class="visually-hidden" for="search-input">
+              Search pre-owned products
+            </label>
+
+            <svg class="search-icon" viewBox="0 0 24 24"
+                 width="22" height="22" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" fill="none"
+                      stroke="currentColor" stroke-width="2"/>
+              <path d="m20 20-3.8-3.8" fill="none"
+                    stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round"/>
+            </svg>
+
+            <input class="search-input" id="search-input"
+                   name="q" type="search"
+                   placeholder="Search laptops, chairs, books…"
+                   autocomplete="off">
+
+            <button class="btn btn-primary search-submit"
+                    id="search-submit" type="submit">
+              Search
+            </button>
+          </form>
+
+          <div class="hero-actions">
+            <a class="btn btn-secondary" href="products.html" id="hero-browse-btn">
+              Browse Products
+            </a>
+          </div>
+
+          <p class="trust-note">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M12 3 4.5 6v5.5c0 4.4 3.1 8.3 7.5 9.5 4.4-1.2 7.5-5.1 7.5-9.5V6L12 3Z"
+                    fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round"/>
+              <path d="m8.8 12.2 2.4 2.4 4-4.6"
+                    fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            See full details of every item, then talk to the seller directly.
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-label="A selection of pre-owned products">
+
+          <figure class="hero-tile hero-tile-laptop">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80"
+                 alt="Silver laptop open on a desk"
+                 loading="eager" width="900" height="650">
+            <figcaption>Electronics</figcaption>
+          </figure>
+
+          <figure class="hero-tile hero-tile-chair">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=700&q=80"
+                 alt="Minimal wooden chair"
+                 loading="eager" width="700" height="800">
+            <figcaption>Furniture</figcaption>
+          </figure>
+
+          <figure class="hero-tile hero-tile-phone">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80"
+                 alt="Smartphone resting on a table"
+                 loading="eager" width="600" height="600">
+            <figcaption>Smartphones</figcaption>
+          </figure>
+
+          <figure class="hero-tile hero-tile-books">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=80"
+                 alt="Stack of used books"
+                 loading="eager" width="700" height="600">
+            <figcaption>Books</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section categories" id="categories"
+             aria-labelledby="categories-title">
+
+      <div class="container">
+
+        <header class="section-head">
+          <h2 class="section-title" id="categories-title">
+            Explore by Category
+          </h2>
+          <p class="section-subtitle">
+            Start with what you need and narrow it down from there.
+          </p>
+        </header>
+
+        <ul class="category-grid" id="category-grid">
+
+          <li>
+            <a class="category-card" href="products.html?category=Electronics"
+               data-category="Electronics">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28"
+                     fill="none" stroke="currentColor" stroke-width="1.7"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="12" rx="2"/>
+                  <path d="M2 20h20M9 16v4M15 16v4"/>
+                </svg>
+              </span>
+              <h3 class="category-name">Electronics</h3>
+              <p class="category-desc">
+                Laptops, phones, headphones and other everyday gadgets.
+              </p>
+              <span class="category-link">Browse electronics →</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="category-card" href="products.html?category=Furniture"
+               data-category="Furniture">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28"
+                     fill="none" stroke="currentColor" stroke-width="1.7"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 11V7a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4"/>
+                  <path d="M3 14a2 2 0 0 1 4 0v1h10v-1a2 2 0 0 1 4 0v4H3v-4Z"/>
+                  <path d="M6 18v2M18 18v2"/>
+                </svg>
+              </span>
+              <h3 class="category-name">Furniture</h3>
+              <p class="category-desc">
+                Chairs, tables, shelves and storage for any room.
+              </p>
+              <span class="category-link">Browse furniture →</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="category-card" href="products.html?category=Books"
+               data-category="Books">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28"
+                     fill="none" stroke="currentColor" stroke-width="1.7"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/>
+                  <path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/>
+                  <path d="M9 8h7"/>
+                </svg>
+              </span>
+              <h3 class="category-name">Books</h3>
+              <p class="category-desc">
+                Textbooks, novels and reference books ready for a new reader.
+              </p>
+              <span class="category-link">Browse books →</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="category-card" href="products.html?category=Other"
+               data-category="Other">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28"
+                     fill="none" stroke="currentColor" stroke-width="1.7"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/>
+                  <path d="m4 7.5 8 4.5 8-4.5M12 12v9"/>
+                </svg>
+              </span>
+              <h3 class="category-name">Other Products</h3>
+              <p class="category-desc">
+                Sports gear, decor, kitchen items and more finds.
+              </p>
+              <span class="category-link">Browse more →</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- Featured Products: Real Backend Data Only -->
+    <section class="section featured" id="featured-products"
+             aria-labelledby="featured-title">
+
+      <div class="container">
+
+        <header class="section-head section-head-row">
+          <div>
+            <h2 class="section-title" id="featured-title">
+              Explore Featured Finds
+            </h2>
+            <p class="section-subtitle">
+              Discover real pre-owned products listed by our sellers.
+            </p>
+          </div>
+
+          <a class="text-link" href="products.html">
+            View all products →
+          </a>
+        </header>
+
+        <!-- Products fetched from FastAPI will appear here -->
+        <div class="product-grid" id="product-grid" aria-live="polite">
+
+          <p id="featured-loading">
+            Loading available products...
+          </p>
+
+        </div>
+
+        <!-- Empty state -->
+        <p id="featured-empty" hidden>
+          No products are available yet. Check back soon!
+        </p>
+
+        <!-- API error state -->
+        <p id="featured-error" hidden>
+          Unable to load products. Please try again later.
+        </p>
+
+        <!-- Product card template -->
+        <template id="product-card-template">
+
+          <article class="product-card">
+
+            <a class="product-media" data-field="link">
+              <img data-field="image"
+                   src=""
+                   alt=""
+                   loading="lazy"
+                   width="700"
+                   height="525">
+            </a>
+
+            <div class="product-body">
+
+              <p class="product-category" data-field="category"></p>
+
+              <h3 class="product-title" data-field="title"></h3>
+
+              <div class="product-footer">
+
+                <p class="product-price" data-field="price"></p>
+
+                <a class="text-link" data-field="link">
+                  View Details
+                </a>
+
+              </div>
+            </div>
+          </article>
+
+        </template>
+
+      </div>
+    </section>
+
+    <!-- AI Recommendations -->
+    <section class="section recommendations" id="recommendations"
+             aria-labelledby="recommendations-title">
+
+      <div class="container recommendations-grid">
+
+        <div class="recommendations-copy">
+
+          <h2 class="section-title" id="recommendations-title">
+            Discover Items Picked for Your Interests.
+          </h2>
+
+          <p class="section-subtitle">
+            Find products that match your interests through personalized
+            recommendations powered by machine learning.
+          </p>
+
+          <p class="recommendations-detail">
+            ReUse uses a K-Nearest Neighbors (KNN) model that compares
+            product information with the products you view, so similar
+            items can surface as you browse.
+          </p>
+
+          <ul class="recommendations-points">
+
+            <li>
+              Based on product details such as category and description
+            </li>
+
+            <li>
+              Learns from the products you open while browsing
+            </li>
+
+            <li>
+              Shown to you when you are logged in and exploring
+            </li>
+
+          </ul>
+
+          <a class="btn btn-primary" href="products.html"
+             id="recommendations-cta">
+            Browse Products
+          </a>
+
+        </div>
+
+        <!-- Conceptual recommendation illustration -->
+        <div class="recommendations-visual" id="recommendations-visual"
+             role="img"
+             aria-label="Illustration representing related product recommendations">
+
+          <svg class="knn-lines" viewBox="0 0 520 460"
+               aria-hidden="true" preserveAspectRatio="none">
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-dasharray="4 7" stroke-linecap="round">
+              <path d="M260 230 130 110"/>
+              <path d="M260 230 400 120"/>
+              <path d="M260 230 120 340"/>
+              <path d="M260 230 410 345"/>
+            </g>
+          </svg>
+
+          <div class="knn-center">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80"
+                 alt="" width="500" height="375" loading="lazy">
+          </div>
+
+          <div class="knn-node knn-node-a">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80"
+                 alt="" width="300" height="300" loading="lazy">
+          </div>
+
+          <div class="knn-node knn-node-b">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=300&q=80"
+                 alt="" width="300" height="300" loading="lazy">
+          </div>
+
+          <div class="knn-node knn-node-c">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=300&q=80"
+                 alt="" width="300" height="300" loading="lazy">
+          </div>
+
+          <div class="knn-node knn-node-d">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=300&q=80"
+                 alt="" width="300" height="300" loading="lazy">
+          </div>
+
+          <p class="knn-caption">Illustration only</p>
+
+        </div>
+
+        <!-- Real KNN recommendation results container -->
+        <div class="recommendations-results"
+             id="recommendation-results"
+             hidden aria-live="polite">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section how-it-works" id="how-it-works"
+             aria-labelledby="how-title">
+
+      <div class="container">
+
+        <header class="section-head section-head-center">
+          <h2 class="section-title" id="how-title">
+            A Simple Way to Give Products a Second Life
+          </h2>
+        </header>
+
+        <ol class="steps">
+
+          <li class="step">
+            <span class="step-icon" aria-hidden="true">01</span>
+            <h3 class="step-title">Browse Products</h3>
+            <p class="step-text">
+              Explore available pre-owned products.
+            </p>
+          </li>
+
+          <li class="step">
+            <span class="step-icon" aria-hidden="true">02</span>
+            <h3 class="step-title">Find What You Need</h3>
+            <p class="step-text">
+              View product details and discover suitable items.
+            </p>
+          </li>
+
+          <li class="step">
+            <span class="step-icon" aria-hidden="true">03</span>
+            <h3 class="step-title">Contact the Seller</h3>
+            <p class="step-text">
+              Connect directly with the seller.
+            </p>
+          </li>
+
+        </ol>
+
+        <div class="section-cta">
+          <a class="btn btn-secondary" href="products.html">
+            Start Browsing
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a class="logo" href="index.html" aria-label="ReUse home">
+          <span class="logo-text">ReUse</span>
+        </a>
+
+        <p class="footer-text">
+          An AI-powered marketplace for buying and selling used goods,
+          so useful things keep finding new owners.
+        </p>
+
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Browse Products</a></li>
+          <li><a href="sell.html">Sell an Item</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="copyright">
+        &copy; <span id="current-year">2026</span> ReUse. All rights reserved.
+      </p>
+    </div>
+
+  </footer>
+
+  <!-- Mobile navigation and footer scripts -->
+  <script>
+    (function () {
+      const toggle = document.getElementById("nav-toggle");
+      const menu = document.getElementById("nav-menu");
+
+      if (!toggle || !menu) return;
+
+      function setOpen(open) {
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute(
+          "aria-label",
+          open ? "Close menu" : "Open menu"
+        );
+
+        menu.classList.toggle("is-open", open);
+        document.body.classList.toggle("nav-open", open);
+      }
+
+      toggle.addEventListener("click", function () {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+
+      menu.addEventListener("click", function (event) {
+        if (event.target.closest("a")) {
+          setOpen(false);
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          setOpen(false);
+        }
+      });
+    })();
+
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+
+    document.addEventListener("error", function (event) {
+      if (event.target && event.target.tagName === "IMG") {
+        event.target.classList.add("img-fallback");
+      }
+    }, true);
+  </script>
+
+  <!-- Application JavaScript -->
+  <script src="js/config.js?v=20261112-tab-session"></script>
+  <script src="js/auth.js?v=20261112-access"></script>
+  <script src="js/recommendations.js?v=20261112-images"></script>
+  <script src="js/products.js?v=20261112-images"></script>
+
+</body>
+</html>
